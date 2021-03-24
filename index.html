@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="MAGAZINE - Style. Mood. Impression." />
+    <meta property="og:description"
+        content="coming soon: spring-summerexperts in the field of style will tell you about the new trends of the upcoming season collection" />
+    <meta property="og:image" content="images/logo.png" />
+    <title>MAGAZINE - Style. Mood. Impression.</title>
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <h2 id="timer" class="top__time"></h2>
+    <script type="text/javascript">
+        let timer_show = document.getElementById("timer");
+
+        // Функция для вычисления разности времени
+        function diffSubtract(date1, date2) {
+            return date2 - date1;
+        }
+
+        // Массив данных о времени
+        let end_date = {
+            "full_year": "2021", // Год
+            "month": "05", // Номер месяца
+            "day": "19", // День
+            "hours": "00", // Час
+            "minutes": "00", // Минуты
+            "seconds": "00" // Секунды
+        }
+
+        // Строка для вывода времени
+        let end_date_str = `${end_date.full_year}-${end_date.month}-${end_date.day}T${end_date.hours}:${end_date.minutes}:${end_date.seconds}`;
+        timer = setInterval(function () {
+            // Получение времени сейчас
+            let now = new Date();
+            // Получение заданного времени
+            let date = new Date(end_date_str);
+            // Вычисление разницы времени 
+            let ms_left = diffSubtract(now, date);
+
+            // Если разница времени меньше или равна нулю 
+            if (ms_left <= 0) { // То
+                // Выключаем интервал
+                clearInterval(timer);
+                // Выводим сообщение об окончание
+                alert("Время закончилось");
+            } else { // Иначе
+                // Получаем время зависимую от разницы
+                let res = new Date(ms_left);
+                // Делаем строку для вывода
+                let str_timer = `${(res.getMonth() < 10 ? '0' : '') + (res.getMonth() - 1)}:${(res.getHours() < 10 ? '0' : '') + res.getHours()}:${(res.getMinutes() < 10 ? '0' : '') + res.getMinutes()}:${(res.getSeconds() < 10 ? '0' : '') + res.getSeconds()}`;
+                // Выводим время
+                timer_show.innerHTML = str_timer;
+            }
+        }, 1000)
+    </script>
+    <section class="wrapper">
+        <div class="container">
+            <div class="page__inner">
+                <div class="part__1">
+                    <h1 class="big__title">MAGAZINE</h1>
+                    <h2 class="medium__title">Style. Mood. Impression.</h2>
+                    <h3 class="small__title">coming soon: spring-summer collection</h3>
+                    <form class="top__form">
+                        <!-- Hidden inputs -->
+                        <input type="hidden" name="project_name" value="MAGAZINE - Style. Mood. Impression.">
+                        <input type="hidden" name="admin_email" value="pavl.elvina@gmail.com">
+                        <input type="hidden" name="form_subject" value="Form from MAGAZINE">
+                        <!-- You inputs -->
+                        <input class="top__form-input" type="email" name="E-mail" placeholder="Enter your email...">
+                        <button class="top__form-submit">pre-order</button>
+                    </form>
+                    <p class="form__text">
+                        coming soon: spring-summerexperts in the field of style will tell you about the new trends of
+                        the upcoming season collection
+                    </p>
+                    <form class="bottom__form">
+                        <!-- Hidden inputs -->
+                        <input type="hidden" name="project_name" value="MAGAZINE - Style. Mood. Impression.">
+                        <input type="hidden" name="admin_email" value="pavl.elvina@gmail.com">
+                        <input type="hidden" name="form_subject" value="Form from MAGAZINE">
+                        <!-- You inputs -->
+                        <input class="bottom__form-tel" type="tel" name="Telephone" placeholder="+7 ХХХ ХХХ ХХХ">
+                        <button class="bottom__form-submit">call me back</button>
+                        <input class="bottom__form-date" type="date" name="Date" value="2021-04-16">
+                        <input class="bottom__form-time" type="time" name="Time" value="20:10">
+                        <i></i>
+                        <button class="bottom__form-submit-bottom">CALL ME NOW</button>
+                    </form>
+                    <footer class="footer">
+                        <ul class="footer__social">
+                            <li class="social__item"><a href="https://www.facebook.com/" target="_blank"><svg
+                                        class="svg-1" width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18" cy="18" r="18" fill="black" />
+                                        <path
+                                            d="M13 14.2V18.3143H15.5714V29.6286L19.6857 29.6286V18.3143H23.2857L23.8 14.2H19.6857V12.1143C19.6857 11.562 20.1334 11.1143 20.6857 11.1143H23.2496V7.00001L19.1354 7C17.153 7 15.5515 8.61765 15.5714 10.6L15.5714 14.2H13Z"
+                                            fill="white" />
+                                    </svg></a></li>
+                            <li class="social__item"><a href="https://www.instagram.com/" target="_blank"><svg
+                                        class="svg-2" width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="c2b" cx="18" cy="18" r="18" fill="black" />
+                                        <rect x="8.75" y="8.75" width="18.5" height="18.5" rx="5.25" stroke="white"
+                                            stroke-width="1.5" />
+                                        <circle class="c2w" cx="18" cy="18" r="4.25" stroke="white"
+                                            stroke-width="1.5" />
+                                        <path
+                                            d="M22.5 12.75C22.5 13.1642 22.8358 13.5 23.25 13.5C23.6642 13.5 24 13.1642 24 12.75C24 12.3358 23.6642 12 23.25 12C22.8358 12 22.5 12.3358 22.5 12.75Z"
+                                            fill="white" stroke="white" />
+                                    </svg></a></li>
+                            <li class="social__item"><a href="https://www.youtube.com/" target="_blank"><svg
+                                        class="svg-3" width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18" cy="18" r="18" fill="black" />
+                                        <rect x="8" y="11" width="20" height="14" rx="3" fill="white" />
+                                        <path d="M16 21.5V14.5L21.5 18L16 21.5Z" fill="black" />
+                                    </svg></a></li>
+                            <li class="social__item">
+                                <a href="https://twitter.com/" target="_blank"><svg class="svg-4" width="36" height="36"
+                                        viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18" cy="18" r="18" fill="black" />
+                                        <path
+                                            d="M9.93063 11.2065L9.62931 10.9052L9.42459 11.3146C9.32001 11.5238 9.23863 11.7438 9.18191 11.9706C9.11835 12.2249 9.08621 12.486 9.08621 12.748V13.0487C9.08621 13.3089 9.1077 13.5686 9.15048 13.8253L9.18375 14.0249C9.2391 14.357 9.3438 14.679 9.49438 14.9801C9.70277 15.3969 9.99514 15.7661 10.3531 16.0644L10.8966 16.5172C10.3043 16.5172 9.72309 16.3563 9.2152 16.0515L9.08621 15.9741V16.5273C9.08621 16.7611 9.11488 16.994 9.17158 17.2208C9.23505 17.4747 9.33309 17.7187 9.46293 17.9459L9.74877 18.4461C9.90922 18.7269 10.1186 18.9767 10.367 19.1837L10.5918 19.371C10.9139 19.6395 11.2734 19.8598 11.6588 20.025L12.3448 20.319C11.8672 20.4384 11.3701 20.4582 10.8844 20.3773L10.5345 20.319L10.7121 20.7631C10.8345 21.0691 10.9967 21.3577 11.1945 21.6214C11.3573 21.8384 11.5469 22.034 11.7587 22.2035L11.9822 22.3823C12.2229 22.5748 12.4884 22.7339 12.7716 22.8553L13.1874 23.0335C13.4676 23.1536 13.7693 23.2155 14.0741 23.2155H14.5172L14.4703 23.2625C14.0232 23.7096 13.4928 24.0648 12.9091 24.308C12.0586 24.6624 11.1463 24.8448 10.2249 24.8448L8 24.8448L8.02741 24.8722C8.12927 24.9741 8.24563 25.0603 8.37273 25.1281L9.11065 25.5216C10.2941 26.1528 11.5684 26.5963 12.8879 26.8362L13.6815 26.9023C14.5978 26.9787 15.5198 26.9516 16.4301 26.8216C17.2041 26.711 17.9632 26.5135 18.6929 26.2328L19.042 26.0986C19.6446 25.8668 20.222 25.5741 20.765 25.2249L21.396 24.8193C22.1176 24.3554 22.7772 23.8017 23.359 23.1714C24.2181 22.2407 24.931 21.1849 25.4732 20.0403L25.6337 19.7015C26.0656 18.7897 26.3733 17.8241 26.5487 16.8305L26.7828 15.5036C26.8126 15.3349 26.8276 15.1638 26.8276 14.9925V14.3448C27.4298 13.863 27.9882 13.3288 28.4961 12.7483L29 12.1724C28.2773 12.4133 27.5344 12.5887 26.7803 12.6964L26.6466 12.7155L27.2464 12.2357C27.4493 12.0733 27.6337 11.889 27.796 11.686L27.8096 11.6691C28.1168 11.285 28.3376 10.8392 28.4569 10.3621L27.4825 10.9467C26.9261 11.2805 26.3439 11.5694 25.7414 11.8103L25.2885 11.2669C24.9902 10.9089 24.621 10.6166 24.2043 10.4082C23.9031 10.2576 23.5811 10.1529 23.249 10.0975L23.2147 10.0918C22.8496 10.031 22.4773 10.0266 22.1109 10.079L21.7098 10.1363C21.5014 10.1661 21.2961 10.2145 21.0963 10.2811L21.0852 10.2848C20.5756 10.4547 20.1126 10.7408 19.7328 11.1206C19.5154 11.3381 19.3279 11.5836 19.1753 11.8506L19.0437 12.0809C18.8033 12.5016 18.6276 12.956 18.5225 13.429C18.3881 14.0339 18.3713 14.659 18.4732 15.2702L18.5 15.431L18.4718 15.427C17.6471 15.3092 16.8333 15.1252 16.0381 14.8767L15.9517 14.8497C14.8782 14.5142 13.8467 14.0569 12.8774 13.4867C11.8026 12.8544 10.8124 12.0882 9.93063 11.2065Z"
+                                            fill="white" stroke="white" stroke-width="0.1" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+                <div class="part__2">
+                    <div class="slider">
+                        <div class="slider__item"><img src="images/slider__image-1.jpg" alt=""></div>
+                        <div class="slider__item"><img src="images/slider__image-1.jpg" alt=""></div>
+                        <div class="slider__item"><img src="images/slider__image-1.jpg" alt=""></div>
+                        <div class="slider__item"><img src="images/slider__image-1.jpg" alt=""></div>
+                        <div class="slider__item"><img src="images/slider__image-1.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/mail.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
